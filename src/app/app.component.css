@@ -1,0 +1,14 @@
+nav {
+    padding: 1%;
+    background-color:wheat;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+a {
+    padding: 0 5%;
+    color: black;
+    text-decoration: none;
+}

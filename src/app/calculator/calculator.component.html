@@ -1,0 +1,28 @@
+<div>
+    <div>
+        <input id="firstNumber" type="number" [(ngModel)]="firstNumber">
+        <div>
+            <select [(ngModel)]="selectedOperation">
+                <option value="addition">+</option>
+                <option value="subtraction">-</option>
+                <option value="multiplication">*</option>
+                <option value="division">/</option>
+            </select>
+        </div>
+        <input id="secondNumber" type="number" [(ngModel)]="secondNumber">
+    </div>
+    <button type="button" (click)="calculate()">Calculate</button>
+    <div>
+        <p>Last Result: {{ result }}</p>
+    </div>
+    <div *ngIf="history.length > 0">
+        <h2>History</h2>
+        <ul>
+          <li *ngFor="let operation of history">
+            <p>{{ operation.time }} - {{ operation.operation }}: {{ operation.result }}</p>
+            <button type="button" (click)="removeFromHistory(operation)">Remove</button>
+          </li>
+        </ul>
+      </div>
+
+</div>

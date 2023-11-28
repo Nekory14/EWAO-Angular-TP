@@ -1,0 +1,47 @@
+<div class="padding">
+    <label for="userName">Enter Name:</label>
+    <input id="userName" [(ngModel)]="userName" />
+  
+</div>
+<div class="padding">
+  
+    <label for="font">Choose Font:</label>
+    <select id="font" [(ngModel)]="selectedFont">
+      <option value="Arial">Arial</option>
+      <option value="Times New Roman">Times New Roman</option>
+      <option value="Verdana">Verdana</option>
+      <option value="Georgia">Georgia</option>
+      <option value="Courier">Courier</option>
+    </select>
+  
+</div>
+<div class="padding">
+  
+    <label for="fontSize">Choose Font Size:</label>
+    <input id="fontSize" type="number" [(ngModel)]="fontSize" />
+  
+</div>
+<div class="padding">
+  
+    <label>Choose Alignment:</label>
+    <div>
+      <input type="checkbox" id="leftAlign" (change)="updateAlignment('left')" />
+      <label for="leftAlign">Left</label>
+    </div>
+    <div>
+      <input type="checkbox" id="centerAlign" (change)="updateAlignment('center')" />
+      <label for="centerAlign">Center</label>
+    </div>
+    <div>
+      <input type="checkbox" id="rightAlign" (change)="updateAlignment('right')" />
+      <label for="rightAlign">Right</label>
+    </div>
+  
+</div>
+<div class="padding">
+  
+    <div [style.font-family]="selectedFont" [style.font-size.px]="fontSize" [style.text-align]="alignment.join(' ')">
+      {{ getFormattedText() }}
+    </div>
+  </div>
+  

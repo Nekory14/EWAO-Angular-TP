@@ -1,0 +1,24 @@
+* {
+    text-align: center;
+}
+
+input {
+    margin: 2% 0;
+}
+
+select, button {
+    width: 9.3%;
+}
+
+input, select, button {
+    height: 3em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+h2 {
+    margin-top: 5%;
+}

@@ -1,0 +1,12 @@
+* {
+    text-align: center;
+}
+
+button {
+    margin-top: 3%;
+    font-weight: bold;
+}
+
+button, div {
+    padding: 0.8%;
+}

@@ -1,0 +1,22 @@
+<div *ngIf="transaction">
+    <h2>Transaction Details for ID: {{ transaction.id }}</h2>
+    <div>
+      <strong>ID:</strong> {{ transaction.id }}
+    </div>
+    <div>
+      <strong>Amount:</strong> {{ transaction.amount }}
+    </div>
+    <div>
+      <strong>Balance:</strong> {{ transaction.balance }}
+    </div>
+    <div>
+      <strong>Label:</strong> {{ transaction.label }}
+    </div>
+    <div>
+      <strong>Date:</strong> {{ transaction.date }}
+    </div>
+  </div>
+  
+  <div>
+    <button type="button" (click)="back()">Back to all transactions</button>
+  </div>
